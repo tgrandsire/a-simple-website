@@ -7,15 +7,15 @@ use Gedmo\Mapping\Annotation as Gedmo;
 use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
- * Blameable Trait inpired By Gedmo\Blameable\Traits\BlameableEntity
+ * BlameableEntity Trait inpired By Gedmo\Blameable\Traits\BlameableEntity
  */
-trait BlameableTrait
+trait BlameableEntity
 {
     /**
      * @var User
      *
      * @Gedmo\Blameable(on="create")
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Security\User")
      * @ORM\JoinColumn(name="created_by", referencedColumnName="id")
      */
     protected $createdBy;
@@ -24,7 +24,7 @@ trait BlameableTrait
      * @var User
      *
      * @Gedmo\Blameable(on="update")
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Security\User")
      * @ORM\JoinColumn(name="updated_by", referencedColumnName="id")
      */
     protected $updatedBy;

@@ -7,9 +7,9 @@ use Gedmo\Mapping\Annotation as Gedmo;
 use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
- * Timestampable Trait inpired By Gedmo\Timestampable\Traits\TimestampableEntity
+ * TimestampableEntity Trait inpired By Gedmo\Timestampable\Traits\TimestampableEntity
  */
-trait TimestampableTrait
+trait TimestampableEntity
 {
     /**
      * @var \DateTime
